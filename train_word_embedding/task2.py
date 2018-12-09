@@ -55,7 +55,6 @@ dummy_y = np_utils.to_categorical(encoded_Y)
 
 model=Sequential()
 model.add(Dense(units=vocab_size))
-model.add(Dense(512))
 model.add(Dense(128))
 model.add(Dense(32))
 model.add(Dense(8))
