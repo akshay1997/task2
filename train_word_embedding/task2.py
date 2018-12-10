@@ -59,6 +59,7 @@ model.add(Dense(128))
 model.add(Dense(32))
 
 model.add(Dense(8))
+model.add(Dense(3, activation='sigmoid'))
 
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['acc'])
