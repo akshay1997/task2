@@ -54,13 +54,12 @@ encoded_Y = encoder.transform(labels)
 dummy_y = np_utils.to_categorical(encoded_Y)
 
 model=Sequential()
-model.add(Dense(units=vocab_size))
-'''
+model.add(Dense(units=256))
 model.add(Dense(128))
 model.add(Dense(32))
+
 model.add(Dense(8))
-'''
-model.add(Dense(3, activation='sigmoid'))
+
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['acc'])
 model.fit(X_train_arr, dummy_y[:13200], epochs=30, verbose=1, validation_split=0.1)
